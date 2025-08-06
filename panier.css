@@ -1,0 +1,221 @@
+:root {
+  --main-color: #d7a10d;       /* Doré du logo */
+  --text-color: #000000;       /* Noir */
+  --bg-color: #ffffff;         /* Blanc */
+  --font-size-small: 14.5px;   /* Taille de texte fine */
+
+  --btn-danger-bg: #e03e3e;
+  --btn-danger-hover: #b53131;
+  --btn-primary-bg: var(--main-color);
+  --btn-primary-hover: #b38804;
+  --btn-text-color: #fff;
+
+  --bge-color: #e1dfdf;
+  --bgr-color: #f2eded;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+main.panier-container {
+  width: 100vw;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+/* === VERSION PC - TABLEAU === */
+.table-responsive {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.panier-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.panier-table thead tr {
+  background-color: var(--main-color);
+  color: var(--btn-text-color);
+  text-align: left;
+}
+
+.panier-table th,
+.panier-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.panier-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.panier-table input.qty-input {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Boutons génériques */
+.btn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+  user-select: none;
+  color: var(--btn-text-color);
+}
+
+/* Bouton danger */
+.btn-danger {
+  background-color: var(--btn-danger-bg) !important;
+  color: var(--btn-text-color);
+  box-shadow: 0 2px 8px rgba(224, 62, 62, 0.4);
+}
+
+.btn-danger:hover {
+  background-color: var(--btn-danger-hover) !important;
+}
+
+/* Bouton primaire */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-text-color);
+  box-shadow: 0 2px 8px rgba(215, 161, 13, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+
+.total-container {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* === VERSION MOBILE - BOXES === */
+.cart-boxes {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    display: none !important; /* masque le tableau sur mobile */
+  }
+
+  .cart-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .cart-box {
+    background-color: var(--bgr-color);
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  .cart-box .produit-nom {
+    flex: 1 1 100%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+  }
+
+  .cart-box .produit-prix,
+  .cart-box .produit-quantity,
+  .cart-box .produit-subtotal {
+    flex: 1 1 30%;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .cart-box .produit-quantity input.qty-input {
+    width: 50px;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .cart-box .actions {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Bouton supprimer dans box mobile */
+  .cart-box button.btn-remove {
+    background-color: var(--btn-danger-bg);
+    color: var(--btn-text-color);
+    border-radius: 5px;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cart-box button.btn-remove:hover {
+    background-color: var(--btn-danger-hover);
+  }
+
+  .buttons-container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons-container button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.1rem;
+  }
+
+  .total-container {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+}

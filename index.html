@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio-Drey</title>
+
+  <!-- Google Fonts : Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="bio drey.jpg"/>
+  <link rel="stylesheet" href="cartes_acc.css">
+</head>
+<body>
+
+  <div class="top-header">
+    <div class="top-header-left">
+      <a href="#">À propos</a>
+      <a href="#">Aide</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="top-header-right">
+      <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+<header class="main-header">
+  <!-- Partie gauche : logo + nom -->
+ <a href="#"> <div class="header-mobile-left">
+    <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
+    <h1 class="brand-name">
+      <span class="gold">Bio-</span><span class="black">Drey</span>
+    </h1>
+  </div></a>
+
+  <!-- Partie centre mobile : icône panier -->
+  <div class="header-mobile-center">
+    <a href="panier.html" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+  </div>
+
+  <!-- Menu burger à droite (mobile) -->
+  <div class="burger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu desktop visible uniquement sur PC -->
+  <nav class="header-desktop-nav">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="nos_produits.html">Nos Produits</a>
+    <a href="assistant_clientele.html#contact">Contact</a>
+     <a href="assistant_clientele.html">Assistance clientèle</a>
+    <a href="panier.html" class="cart-link">
+      <i class="fas fa-shopping-cart"></i> Panier
+    </a>
+  </nav>
+</header>
+
+<!-- Menu mobile déroulant -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <a href="nos_produits.html">Nos Produits</a>
+  <a href="assistant_clientele.html#contact">Contact</a>
+  <a href="assistant_clientele.html">Assistance clientèle</a>
+  <a href="panier.html" class="cart-link">
+    <i class="fas fa-shopping-cart"></i> Panier
+  </a>
+</div>
+ <div class="pub-bar">
+    <button class="nav-arrow left">&#10094;</button>
+    
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <p>Commandez et faites vous livrer 24H/24</p>
+         
+        </div>
+        <div class="slide">
+          <p>Notre assistant clientèle vous répond 24H/24</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <button class="nav-arrow right">&#10095;</button>
+  </div>
+
+
+<section class="hero-carousel">
+  <div class="carousel-slide active" style="background-image: url('https://img.freepik.com/premium-photo/black-beautiful-studio-portrait-four-female-friends-aesthetic-african-american-adults_1014870-62924.jpg');">
+    <div class="hero-content">
+      <h1>Retrouvez la qualité, la texture et la pousse naturelles de vos cheveux</h1>
+      <a href="#commande" class="hero-btn">Commander</a>
+    </div>
+  </div>
+  <div class="carousel-slide" style="background-image: url('https://img.freepik.com/photos-premium/portrait-beaute-femme-afro-americaine-peau-saine-propre-fond-beige-souriant-reveur-belle-fille-afro-cheveux-noirs-boucles_908985-5939.jpg');">
+    <div class="hero-content">
+      <h1>La solution 100% naturelle et bio pour vos cheveux</h1>
+      <a href="#about" class="hero-btn">En savoir plus</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <button class="carousel-nav prev">&#10094;</button>
+  <button class="carousel-nav next">&#10095;</button>
+</section>
+<section class="quality-services">
+  <div class="service-box">
+    <div class="icon-wrapper">
+      <i class="fas fa-shipping-fast"></i>
+    </div>
+    <h3>Livraisons et expéditions<br>partout dans le monde</h3>
+  </div>
+  <div class="service-box">
+    <div class="icon-wrapper">
+      <i class="fas fa-headset"></i>
+    </div>
+    <h3>Assistance clientèle<br>24H/24</h3>
+  </div>
+  <div class="service-box">
+    <div class="icon-wrapper">
+      <i class="fas fa-smile-beam"></i>
+    </div>
+    <h3>Clients<br>100% satisfaits</h3>
+  </div>
+  <div class="service-box">
+    <div class="icon-wrapper">
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <h3>Résultats en<br>quelques semaines</h3>
+  </div>
+</section>
+
+
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">Questions Fréquemment Posées</h2>
+  <div class="accordion">
+    
+    <div class="accordion-item">
+      <button class="accordion-header">En combien de temps on voit les résultats ?</button>
+      <div class="accordion-body">
+        <p>Les résultats sont visibles dès la deuxième semaine.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">Les produits ont-ils une mauvaise odeur ?</button>
+      <div class="accordion-body">
+        <p>Non, juste une odeur fine et naturelle qui disparaît au bout de quelques minutes.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Les enfants peuvent l'utiliser ? Les hommes peuvent l'utiliser ? Les personnes âgées peuvent l'utiliser ?
+      </button>
+      <div class="accordion-body">
+        <p>Oui, nos produits sont mixtes. Pour homme, femme et enfant à partir de 1 an.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">J'ai des cheveux défrisés, j'ai les cheveux crépus, puis-je utiliser ?</button>
+      <div class="accordion-body">
+        <p>Oui, nos produits sont mixtes et adaptés à tous types de cheveux.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">Quel produit utiliser pour la calvitie ?</button>
+      <div class="accordion-body">
+        <p>Le shampoing et le duo huile et spray. Le shampoing, utilisé comme traitement, débouche les pores et élimine la première couche superficielle de la peau pour permettre une meilleure pénétration du duo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="video-shots-section">
+  <h2 class="section-title">Présentation de nos produits en vidéo</h2>
+  <div class="video-grid">
+    
+    <!-- Vidéo TikTok 1 -->
+    <div class="video-item">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.drey/video/7506624944189492485" data-video-id="7506624944189492485" style="max-width: 100%; min-width: 220px;">
+        <section></section>
+      </blockquote>
+    </div>
+
+    <div class="video-item">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.drey/video/7506624944189492485" data-video-id="7506624944189492485" style="max-width: 100%; min-width: 220px;">
+        <section></section>
+      </blockquote>
+    </div>
+
+    <div class="video-item">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.drey/video/7506624944189492485" data-video-id="7506624944189492485" style="max-width: 100%; min-width: 220px;">
+        <section></section>
+      </blockquote>
+    </div>
+
+   
+
+
+
+  </div>
+</section>
+
+<!-- Script TikTok (à mettre UNE seule fois dans ta page, de préférence en bas du body) -->
+<script async src="https://www.tiktok.com/embed.js"></script>
+
+
+
+
+<section class="meilleures-ventes">
+  <h2 class="section-title">Meilleures ventes</h2>
+  <div class="produit-box">
+    <div class="produit-image">
+      <img src="SERUM HUILE BIO DREY.jpg" alt="Nom du produit">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">SÉRUM D’HUILE - Soin sans rinçage (60 ml)</h3>
+      <p class="produit-description">L’huile BIO DREY est un mélange de 3 huiles végétales et de 5 plantes sélectionnées pour favoriser la pousse des cheveux, leur donner du volume et traiter plusieurs affections capillaires. Elle aide à lutter contre l’alopécie, la chute de cheveux, les démangeaisons, les pellicules, la teigne et la perte de la ligne frontale.</p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="4000">Prix : 4000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <a href="nos_produits.html"><button class="btn-commander" >Commander</button> </a>
+          </div>
+  </div>
+  <div class="btn-produits-container">
+    <a href="nos_produits.html" class="btn-tous-produits">Tous nos produits</a>
+  </div>
+</section>
+
+
+<section class="temoignages-section">
+  <h2 class="section-title">Ils ont testé, ils témoignent</h2>
+  <div class="temoignages-container">
+    
+    <div class="temoignage-box">
+      <img src="tem bio drey1.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Shampoing + Duo</p>
+        <p><strong>Durée :</strong> 2 semaines</p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+    <div class="temoignage-box">
+      <img src="TEM BIO DREY 2.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Gamme complète</p>
+        <p><strong>Durée :</strong> 3 mois</p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+    <div class="temoignage-box">
+      <img src="TEM BIO DREY 3.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Duo huile et spray</p>
+        <p><strong>Durée :</strong> 1 Semaine</p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+
+
+
+    <div class="temoignage-box">
+      <img src="TEM BIO DREY 4.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Gamme complète</p>
+        <p><strong>Durée :</strong> 1 Mois </p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+    <div class="temoignage-box">
+      <img src="TEM BIO DREY 5.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Gamme complète</p>
+        <p><strong>Durée :</strong> 1 mois 1 Semaine</p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+    <div class="temoignage-box">
+      <img src="TEM BIO DREY 6.jpg" alt="Avant / Après">
+      <div class="temoignage-info">
+        <p><strong>Produit utilisé :</strong> Shampoing + Duo</p>
+        <p><strong>Durée :</strong> 2 Semaines</p>
+        <a href="nos_produits.html" class="btn-commander">Commander</a>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="inscription-contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-description">
+    Une question, un doute ou besoin d’assistance ?
+Notre équipe est là pour vous aider.
+N'hésitez pas à nous contacter à tout moment via nos réseaux sociaux ou par email.
+Nous nous ferons un plaisir de vous répondre rapidement !
+    </p>
+
+    <div class="social-icons">
+      <a href="#" class="icon facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="icon email" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="#" class="icon tiktok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="contact-button">
+      <a href="assistant_clientele.html#contact" class="btn-contact">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- 1. Infos / Logo -->
+    <div class="footer-section info">
+      <img src="bio drey.jpg" alt="Logo" class="footer-logo" />
+      <p><strong>Numéro :</strong> +225  0566429316</p>
+      <p><strong>Adresse :</strong> Abidjan Rivera palmeraie, Côte d'Ivoire <br>
+      Bouaké quartier France et rue des commerces, Côte d'Ivoire </p>
+      <p><strong>Email :</strong> contact@bio-drey.com</p>
+    </div>
+
+    <!-- 2. Navigation -->
+    <div class="footer-section nav">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="nos_produits.html">Nos Produits</a>
+      <a href="assistant_clientele.html#contact">Contact</a>
+      <a href="assistant_clientele.html">Assistance clientèle</a>
+      <a href="panier.html" class="cart-link"> Panier</a>
+      <a href="#">À propos</a>
+      <a href="#">Aide</a>
+    </div>
+
+    <!-- 3. FAQ -->
+    <div class="footer-section faq">
+      <h4>FAQ</h4>
+      <a href="assistant_clientele.html">Livraison</a>
+      <a href="assistant_clientele.html">Retours & Remboursements</a>
+      <a href="assistant_clientele.html">Suivi de commande</a>
+      <a href="assistant_clientele.html">Modes de paiement</a>
+    </div>
+
+    <!-- 4. Réseaux sociaux -->
+    <div class="footer-section social">
+      <h4>Suivez-nous</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+<script>
+ 
+</script>
+
+</body>
+</html>

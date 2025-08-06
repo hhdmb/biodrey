@@ -1,0 +1,70 @@
+:root {
+  --main-color: #d7a10d;
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  --bge-color: #e5e3e3;
+  --font-size-small: 14.5px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 95%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  font-size: var(--font-size-small);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid var(--bge-color);
+  border-radius: 6px;
+  font-size: var(--font-size-small);
+}
+
+.btn-success {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.btn-success:hover {
+  background-color: #b78f0c;
+}

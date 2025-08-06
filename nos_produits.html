@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio-Drey</title>
+
+  <!-- Google Fonts : Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="bio drey.jpg"/>
+  <link rel="stylesheet" href="produits.css">
+</head>
+<body>
+
+  <div class="top-header">
+    <div class="top-header-left">
+      <a href="#">À propos</a>
+      <a href="assistant_clientele.html">Aide</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="top-header-right">
+      <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+<header class="main-header">
+  <!-- Partie gauche : logo + nom -->
+  <a href="#"><div class="header-mobile-left">
+    <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
+    <h1 class="brand-name">
+      <span class="gold">Bio-</span><span class="black">Drey</span>
+    </h1>
+  </div></a>
+
+  <!-- Partie centre mobile : icône panier -->
+  <div class="header-mobile-center">
+    <a href="panier.html" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+    </a>
+  </div>
+
+  <!-- Menu burger à droite (mobile) -->
+  <div class="burger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menu desktop visible uniquement sur PC -->
+  <nav class="header-desktop-nav">
+    <a href="index.html">Accueil</a>
+    <a href="nos_produits.html">Nos Produits</a>
+    <a href="assistant_clientele.html#contact">Contact</a>
+     <a href="assistant_clientele.html">Assistance clientèle</a>
+    <a href="panier.html" class="cart-link">
+      <i class="fas fa-shopping-cart"></i> Panier
+    </a>
+  </nav>
+</header>
+
+<!-- Menu mobile déroulant -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+<a href="nos_produits.html">Nos Produits</a>
+    <a href="assistant_clientele.html#contact">Contact</a>
+     <a href="assistant_clientele.html">Assistance clientèle</a>
+  <a href="panier.html" class="cart-link">
+    <i class="fas fa-shopping-cart"></i> Panier
+  </a>
+</div>
+ <div class="pub-bar">
+    <button class="nav-arrow left">&#10094;</button>
+    
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <p>Commandez et faites vous livrer 24H/24</p>
+         
+        </div>
+        <div class="slide">
+          <p>Notre assistant clientèle vous répond 24H/24</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    <button class="nav-arrow right">&#10095;</button>
+  </div>
+
+<header class="page-header">
+  <h1><span class="gold">Bio-</span><span class="black">Drey Boutique</span></h1>
+</header>
+<section class="packaging-container">
+     <h2 class="faq-title">Packaging de nos produits</h2>
+  <div class="produit-box" data-id="pack1">
+    <div class="produit-image">
+      <img src="GAMME COMPLETE.jpg" alt="PACK Gamme complète">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">PACK - Gamme complète</h3>
+      <p class="produit-description">
+        Obtenez tous les soins essentiels de la gamme BIO DREY dans un seul pack : sérum huile, spray, pommade et shampoing. Idéal pour une routine capillaire complète et efficace.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="10000">Prix : 10 000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+  <div class="produit-box" data-id="pack2">
+    <div class="produit-image">
+      <img src="DUO.jpg" alt="PACK Duo - Spray + Huile">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">PACK - Duo Spray + Huile</h3>
+      <p class="produit-description">
+        Associez l’efficacité du spray hydratant et du sérum d’huile pour booster la pousse de vos cheveux et traiter les affections courantes du cuir chevelu.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="5000">Prix : 5 000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+</section>
+
+
+ <section class="produits-container">
+ <h2 class="faq-title">Tous  nos produits</h2>
+  <div class="produit-box" data-id="prod1">
+    <div class="produit-image">
+      <img src="SERUM HUILE BIO DREY.jpg" alt="SÉRUM D’HUILE - Soin sans rinçage (60 ml)">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">SÉRUM D’HUILE - Soin sans rinçage (60 ml)</h3>
+      <p class="produit-description">
+        L’huile BIO DREY est un mélange de 3 huiles végétales et de 5 plantes sélectionnées pour favoriser la pousse des cheveux, leur donner du volume et traiter plusieurs affections capillaires. Elle aide à lutter contre l’alopécie, la chute de cheveux, les démangeaisons, les pellicules, la teigne et la perte de la ligne frontale.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="4000">Prix : 4000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+  <div class="produit-box" data-id="prod2">
+    <div class="produit-image">
+      <img src="spray bio drey.jpg" alt="SPRAY - Soin sans rinçage (125 ml)">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">SPRAY - Soin sans rinçage (125 ml)</h3>
+      <p class="produit-description">
+        Le Spray BIO DREY est un concentré de plantes et d'épices qui nourrit et hydrate intensément les cheveux. Il referme les cuticules, limite la casse et stimule la pousse rapide des cheveux. Intégré dans une routine capillaire, il redonne éclat, souplesse et vitalité à votre chevelure.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="2000">Prix : 2000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+  <div class="produit-box" data-id="prod3">
+    <div class="produit-image">
+      <img src="pommade bio drey.jpg" alt="POMMADE DE CHEVEUX - Soin sans rinçage (200 ml)">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">POMMADE DE CHEVEUX - Soin sans rinçage (200 ml)</h3>
+      <p class="produit-description">
+        La Pommade BIO DREY préserve l’hydratation des cheveux et les protège durablement. Elle aide à réduire la casse, prévient la décoloration et renforce la fibre capillaire, tout en maintenant vos cheveux doux et éclatants.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="2000">Prix : 2000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+  <div class="produit-box" data-id="prod4">
+    <div class="produit-image">
+      <img src="SHAMPOING BIO DREY.jpg" alt="SHAMPOING DEMELANT BioDrey est un soin 2 en 1">
+    </div>
+    <div class="produit-info">
+      <h3 class="produit-nom">SHAMPOING DEMELANT BioDrey est un soin 2 en 1</h3>
+      <p class="produit-description">
+        Le shampoing démêlant BioDrey est un soin 2 en 1. Il nettoie en profondeur le cuir chevelu, débouche les pores et élimine les impuretés telles que les pellicules, les plaques, les teignes, les boutons et les poux.
+      </p>
+      <div class="produit-prix-options">
+        <span class="produit-prix" data-prix="3000">Prix : 3000 FCFA</span>
+        <div class="quantite-selector">
+          <button class="moins">−</button>
+          <input type="number" min="1" value="1" class="quantite-input">
+          <button class="plus">+</button>
+        </div>
+      </div>
+      <button class="btn-commander">Commander</button>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- Notification popup -->
+<div id="notification-popup" class="popup-notif">
+  <p id="notification-message"></p>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- 1. Infos / Logo -->
+    <div class="footer-section info">
+      <img src="bio drey.jpg" alt="Logo" class="footer-logo" />
+      <p><strong>Numéro :</strong> +225  0566429316</p>
+      <p><strong>Adresse :</strong> Abidjan Rivera palmeraie, Côte d'Ivoire <br>
+      Bouaké quartier France et rue des commerces, Côte d'Ivoire </p>
+      <p><strong>Email :</strong> contact@bio-drey.com</p>
+    </div>
+
+    <!-- 2. Navigation -->
+    <div class="footer-section nav">
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="nos_produits.html">Nos Produits</a>
+      <a href="assistant_clientele.html#contact">Contact</a>
+      <a href="assistant_clientele.html">Assistance clientèle</a>
+      <a href="panier.html" class="cart-link"> Panier</a>
+      <a href="#">À propos</a>
+      <a href="assistant_clientele.html">Aide</a>
+    </div>
+
+    <!-- 3. FAQ -->
+    <div class="footer-section faq">
+      <h4>FAQ</h4>
+      <a href="assistant_clientele.html">Livraison</a>
+      <a href="assistant_clientele.html">Retours & Remboursements</a>
+      <a href="assistant_clientele.html">Suivi de commande</a>
+      <a href="assistant_clientele.html">Modes de paiement</a>
+    </div>
+
+    <!-- 4. Réseaux sociaux -->
+    <div class="footer-section social">
+      <h4>Suivez-nous</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chat.js"></script>
+<script>
+// Fonction pour récupérer le panier du localStorage
+function getCart() {
+  return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+// Fonction pour sauvegarder le panier dans localStorage
+function saveCart(cart) {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Fonction pour ajouter ou mettre à jour un produit dans le panier
+function addToCart(product) {
+  const cart = getCart();
+  const foundIndex = cart.findIndex(item => item.id === product.id);
+  if (foundIndex !== -1) {
+    cart[foundIndex].quantity += product.quantity;
+  } else {
+    cart.push(product);
+  }
+  saveCart(cart);
+
+  // Affiche une notification en haut de l’écran
+  showAddToCartNotification(product.name);
+}
+
+// Fonction pour afficher une notification personnalisée
+function showAddToCartNotification(nomProduit) {
+  const notif = document.createElement('div');
+  notif.className = 'add-to-cart-popup';
+  notif.textContent = `"${nomProduit}" ajouté au panier !`;
+
+  document.body.appendChild(notif);
+
+  setTimeout(() => {
+    notif.classList.add('visible'); // Affiche avec animation
+  }, 10);
+
+  setTimeout(() => {
+    notif.classList.remove('visible'); // Cache
+    setTimeout(() => {
+      notif.remove(); // Supprime du DOM
+    }, 300);
+  }, 2000); // Affiché pendant 2 secondes
+}
+
+// Gère l'ajout de produit depuis chaque box
+document.querySelectorAll('.produit-box').forEach(box => {
+  const btnMoins = box.querySelector('.moins');
+  const btnPlus = box.querySelector('.plus');
+  const inputQty = box.querySelector('.quantite-input');
+  const prixElement = box.querySelector('.produit-prix');
+  const prixUnitaire = parseInt(prixElement.dataset.prix, 10);
+  const btnCommander = box.querySelector('.btn-commander');
+  const nomProduit = box.querySelector('.produit-nom').innerText;
+  const idProduit = box.dataset.id;
+
+  function updatePrix() {
+    let qte = parseInt(inputQty.value, 10);
+    if (isNaN(qte) || qte < 1) qte = 1;
+    inputQty.value = qte;
+    const prixTotal = prixUnitaire * qte;
+    prixElement.textContent = `Prix : ${prixTotal.toLocaleString()} FCFA`;
+  }
+
+  btnMoins.addEventListener('click', () => {
+    let qte = parseInt(inputQty.value, 10);
+    if (qte > 1) {
+      inputQty.value = qte - 1;
+      updatePrix();
+    }
+  });
+
+  btnPlus.addEventListener('click', () => {
+    let qte = parseInt(inputQty.value, 10);
+    inputQty.value = qte + 1;
+    updatePrix();
+  });
+
+  inputQty.addEventListener('input', () => {
+    updatePrix();
+  });
+
+  btnCommander.addEventListener('click', () => {
+    let qte = parseInt(inputQty.value, 10);
+    if (isNaN(qte) || qte < 1) qte = 1;
+
+    addToCart({
+      id: idProduit,
+      name: nomProduit,
+      price: prixUnitaire,
+      quantity: qte
+    });
+
+    inputQty.value = 1;
+    updatePrix();
+
+    // ✅ Redirection vers panier.html après ajout
+    window.location.href = 'panier.html';
+  });
+
+  updatePrix();
+});
+
+</script>
+
+
+</body>
+</html>
