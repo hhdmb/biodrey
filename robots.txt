@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bio-drey.site/sitemap.xml
