@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     message += `Adresse : ${commune}, ${ville}, ${pays}`;
 
-    const phoneNumber = "2250151032396"; // remplace par ton numéro
+    const phoneNumber = "2250566429316"; // remplace par ton numéro
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, "_blank");
@@ -203,3 +203,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chargement initial
   loadCart();
 });
+
