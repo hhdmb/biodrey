@@ -168,12 +168,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const prenom = formData.get("prenom").trim();
     const nom = formData.get("nom").trim();
     const numero = formData.get("numero").trim();
+    const number = formData.get("num").trim();
     const pays = formData.get("pays").trim();
     const ville = formData.get("ville").trim();
     const commune = formData.get("commune").trim();
 
     let message = `Salut, j’ai commandé depuis le site BioDrey. Voici mes coordonnées :%0A`;
-    message += `Prénom : ${prenom}%0ANom : ${nom}%0AVoici la date a laquelle je serai disponible pour la livraison : ${numero}%0A%0A`;
+    message += `Prénom : ${prenom}%0ANom : ${nom}%0ANuméro pour la livraison:${number}%0AVoici la date a laquelle je serai disponible pour la livraison : ${numero}%0A%0A`;
     message += `Articles commandés :%0A`;
 
     let total = 0;
@@ -203,4 +204,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chargement initial
   loadCart();
 });
+
 
