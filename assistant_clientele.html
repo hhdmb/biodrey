@@ -3,214 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bio-Drey</title>
-
-  <!-- Google Fonts : Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome CDN pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Lien vers le fichier CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Conciergerie & Assistance VIP | Maison Bio-Drey</title>
+  <meta name="description" content="Service client et conciergerie Bio-Drey : posez toutes vos questions en direct sur nos soins capillaires et corporels naturels.">
   <link rel="icon" href="bio drey.jpg"/>
+
+  <!-- Google Fonts : Playfair Display, Cinzel, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="chat.css">
-
-  <!-- Titre de la page (différent sur chaque page) -->
-<title>Produits capillaires Bio Drey | Naturel et efficace</title>
-
-<!-- Description courte (moins de 160 caractères) -->
-<meta name="description" content="Découvrez les produits capillaires Bio Drey pour cheveux naturels, sains et brillants. Livraison rapide.">
-
-<!-- Pour mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Langue -->
-<html lang="fr">
-
-<!-- Canonical URL (important pour éviter les doublons) -->
-<link rel="canonical" href="https://bio-drey.site/nos_produits.html" />
-
-<!-- Meta Facebook / Open Graph -->
-<meta property="og:title" content="Produits capillaires Bio Drey" />
-<meta property="og:description" content="Des soins capillaires naturels adaptés à tous types de cheveux." />
-<meta property="og:image" content="https://bio-drey.site/images/image-partage.jpg" />
-<meta property="og:url" content="https://bio-drey.site" />
-<meta property="og:type" content="website" />
-
-<!-- Meta Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bio Drey - Soins capillaires naturels">
-<meta name="twitter:description" content="Des produits naturels pour cheveux crépus, bouclés ou lisses.">
-<meta name="twitter:image" content="https://bio-drey.site/images/image-partage.jpg">
-
 </head>
 <body>
 
+  <!-- Top Announcement Bar -->
   <div class="top-header">
     <div class="top-header-left">
-      <a href="#">À propos</a>
-      <a href="assistant_clientele.html">Aide</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#about"><i class="fas fa-gem"></i> Maison Bio-Drey</a>
+      <a href="assistant_clientele.html"><i class="fas fa-headset"></i> Service Concierge 24/7</a>
+      <a href="index.html#faq"><i class="fas fa-circle-question"></i> FAQ & Conseils</a>
     </div>
     <div class="top-header-right">
-      <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.facebook.com/share/1CY4r3SbZq/"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://wa.me/2250566429316"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@bio.drey" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1CY4r3SbZq/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/2250566429316" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 
-<header class="main-header">
-  <!-- Partie gauche : logo + nom -->
-  <a href="#"><div class="header-mobile-left">
-    <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
-    <h1 class="brand-name">
-      <span class="gold">Bio-</span><span class="black">Drey</span>
-    </h1>
-  </div></a>
-
-  <!-- Partie centre mobile : icône panier -->
-  <div class="header-mobile-center">
-    <a href="panier.html" class="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
+  <!-- Main Luxury Header -->
+  <header class="main-header">
+    <a href="index.html" class="header-mobile-left">
+      <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
+      <h1 class="brand-name">
+        <span class="gold">Bio-</span><span class="black">Drey</span>
+      </h1>
     </a>
-  </div>
 
-  <!-- Menu burger à droite (mobile) -->
-  <div class="burger" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </div>
+    <div class="header-mobile-center">
+      <a href="panier.html" class="cart-icon" aria-label="Panier">
+        <i class="fas fa-shopping-bag"></i>
+      </a>
+    </div>
 
-  <!-- Menu desktop visible uniquement sur PC -->
-  <nav class="header-desktop-nav">
+    <div class="burger" onclick="toggleMenu()" aria-label="Menu Mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="header-desktop-nav">
+      <a href="index.html">Accueil</a>
+      <a href="nos_produits.html">La Boutique</a>
+      <a href="#contact">Contact</a>
+      <a href="assistant_clientele.html" class="active">Assistance VIP</a>
+      <a href="panier.html" class="cart-link">
+        <i class="fas fa-shopping-bag"></i> Panier
+        <span class="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Accueil</a>
-   <a href="nos_produits.html">Nos Produits</a>
-    <a href="assistant_clientele.html#contact">Contact</a>
-     <a href="assistant_clientele.html">Assistance clientèle</a>
+    <a href="nos_produits.html">La Boutique</a>
+    <a href="#contact">Contact</a>
+    <a href="assistant_clientele.html" class="active">Assistance VIP</a>
     <a href="panier.html" class="cart-link">
-      <i class="fas fa-shopping-cart"></i> Panier
+      <i class="fas fa-shopping-bag"></i> Mon Panier
     </a>
-  </nav>
-</header>
+  </div>
 
-<!-- Menu mobile déroulant -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Accueil</a>
-  <a href="nos_produits.html">Nos Produits</a>
-    <a href="assistant_clientele.html#contact">Contact</a>
-     <a href="assistant_clientele.html">Assistance clientèle</a>
-  <a href="panier.html" class="cart-link">
-    <i class="fas fa-shopping-cart"></i> Panier
-  </a>
-</div>
- <div class="pub-bar">
-    <button class="nav-arrow left">&#10094;</button>
-    
+  <!-- Promotion Slider -->
+  <div class="pub-bar">
+    <button class="nav-arrow left" aria-label="Précédent">&#10094;</button>
     <div class="slider-container">
       <div class="slider">
         <div class="slide">
-          <p>Commandez et faites vous livrer 24H/24</p>
-         
+          <p>Livraison Express 24h & Expéditions Internationales</p>
         </div>
         <div class="slide">
-          <p>Notre assistant clientèle vous répond 24H/24</p>
-          
+          <p>Ingrédients 100% Biologiques & Formules Authentiques</p>
         </div>
       </div>
     </div>
-    
-    <button class="nav-arrow right">&#10095;</button>
+    <button class="nav-arrow right" aria-label="Suivant">&#10095;</button>
   </div>
 
+  <!-- Concierge Chat Section -->
+  <main class="chat-container">
+    <div class="chat-wrapper">
+      <header class="chat-header">
+        <img src="bio drey.jpg" alt="Bio-Drey Conseiller" class="chat-avatar">
+        <div class="chat-header-info">
+          <h2>Conseiller Privé Bio-Drey</h2>
+          <p>En ligne • Réponse instantanée</p>
+        </div>
+      </header>
 
-<div class="chat-container" role="main" aria-label="Assistance Bio-Drey">
-  <header class="chat-header" aria-live="polite" aria-atomic="true">
-    💬 Bio-Drey Support
-  </header>
-  <section class="chat-box" id="chat-box" tabindex="0" aria-live="polite" aria-relevant="additions">
-    <div class="message bot" role="alert">
-      Bonjour et bienvenue chez Bio-Drey ! Comment puis-je vous aider ?
+      <section class="chat-box" id="chat-box" tabindex="0">
+        <div class="message bot">
+          Bonjour et bienvenue chez Maison Bio-Drey ! Je suis votre conseiller beauté en ligne. Que souhaitez-vous savoir ?
+        </div>
+      </section>
+
+      <nav class="chat-options" aria-label="Options de discussion"></nav>
     </div>
-  </section>
-  <nav class="chat-options" aria-label="Options de discussion"></nav>
-</div>
+  </main>
 
-
-
-<section class="contact-section" id="contact">
-  <div class="contact-container">
-    <h2 class="contact-title">Contactez-nous</h2>
-    <p class="contact-description">
-      Si vous avez des questions auxquelles notre service client n’a pas pu répondre, n’hésitez pas à nous contacter via ce formulaire.
-    </p>
-
-    <form class="contact-form">
-      <div class="form-row">
-        <input type="text" name="nom" placeholder="Nom" required>
-        <input type="text" name="prenom" placeholder="Prénom" required>
+  <!-- Luxury Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section info">
+        <img src="bio drey.jpg" alt="Logo Bio-Drey" class="footer-logo" />
+        <p><strong>Téléphone Direct :</strong> +225 05 66 42 93 16</p>
+        <p><strong>Boutiques :</strong> Abidjan Riviera Palmeraie & Bouaké, Côte d'Ivoire</p>
+        <p><strong>Email :</strong> biodreyafrica@gmail.com</p>
       </div>
-      <div class="form-row">
-        <input type="text" name="objet" placeholder="Objet" required>
-        <input type="email" name="email" placeholder="Email" required>
+
+      <div class="footer-section nav">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="nos_produits.html">La Boutique</a>
+        <a href="assistant_clientele.html#contact">Contact</a>
+        <a href="assistant_clientele.html">Assistance VIP</a>
+        <a href="panier.html">Mon Panier</a>
       </div>
-      <div class="form-row-full">
-        <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+      <div class="footer-section faq">
+        <h4>Informations</h4>
+        <a href="assistant_clientele.html">Livraison & Délais</a>
+        <a href="assistant_clientele.html">Conseils d'utilisation</a>
+        <a href="assistant_clientele.html">Modes de Paiement</a>
+        <a href="index.html#faq">FAQ</a>
       </div>
-      <button type="submit" class="send-btn">Envoyer</button>
-    </form>
-  </div>
-</section>
 
-<footer class="footer">
-  <div class="footer-container">
-    <!-- 1. Infos / Logo -->
-    <div class="footer-section info">
-      <img src="bio drey.jpg" alt="Logo" class="footer-logo" />
-      <p><strong>Numéro :</strong> +225  0566429316</p>
-      <p><strong>Adresse :</strong> Abidjan Rivera palmeraie, Côte d'Ivoire <br>
-      Bouaké quartier France et rue des commerces, Côte d'Ivoire </p>
-      <p><strong>Email :</strong> biodreyafrica@gmail.com</p>
-    </div>
-
-    <!-- 2. Navigation -->
-    <div class="footer-section nav">
-      <h4>Navigation</h4>
-      <a href="index.html">Accueil</a>
-      <a href="nos_produits.html">Nos Produits</a>
-      <a href="assistant_clientele.html#contact">Contact</a>
-      <a href="assistant_clientele.html">Assistance clientèle</a>
-      <a href="panier.html" class="cart-link"> Panier</a>
-      <a href="#">À propos</a>
-      <a href="assistant_clientele.html">Aide</a>
-    </div>
-
-    <!-- 3. FAQ -->
-    <div class="footer-section faq">
-      <h4>FAQ</h4>
-      <a href="assistant_clientele.html">Livraison</a>
-      <a href="assistant_clientele.html">Retours & Remboursements</a>
-      <a href="assistant_clientele.html">Suivi de commande</a>
-      <a href="assistant_clientele.html">Modes de paiement</a>
-    </div>
-
-    <!-- 4. Réseaux sociaux -->
-    <div class="footer-section social">
-      <h4>Suivez-nous</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1CY4r3SbZq/"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:biodreyafrica@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
+      <div class="footer-section social">
+        <h4>Suivez Notre Maison</h4>
+        <div class="social-icons" style="justify-content: flex-start;">
+          <a href="https://www.facebook.com/share/1CY4r3SbZq/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/2250566429316" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:biodreyafrica@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@bio.drey" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-<script src="script.js"></script>
-<script src="chat.js"></script>
+    <div class="footer-bottom">
+      &copy; 2026 Maison Bio-Drey. Tous droits réservés. Cosmétiques naturels d'exception.
+    </div>
+  </footer>
 
+  <script src="chat.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-

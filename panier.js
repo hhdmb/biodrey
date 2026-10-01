@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const popupOverlay = document.getElementById("popup-overlay");
   const closeBtn = document.getElementById("close-popup");
   const orderForm = document.getElementById("order-form");
-  const cartSummaryItems = document.getElementById("cart-summary-items");
 
   function showNotification(message) {
     if (!notification) return;
@@ -17,29 +16,50 @@ document.addEventListener("DOMContentLoaded", () => {
     notification.classList.add("show");
     setTimeout(() => {
       notification.classList.remove("show");
-    }, 3000);
+    }, 3200);
   }
 
   function formatPrice(price) {
-    return price.toLocaleString() + " FCFA";
+    return Number(price).toLocaleString("fr-FR") + " FCFA";
+  }
+
+  function updateBadge() {
+    try {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const totalQty = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+      document.querySelectorAll(".cart-count").forEach((badge) => {
+        badge.textContent = totalQty;
+        badge.style.display = totalQty > 0 ? "inline-block" : "none";
+      });
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   function loadCart() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cartItemsTbody.innerHTML = "";
-    cartBoxesDiv.innerHTML = "";
+    if (cartItemsTbody) cartItemsTbody.innerHTML = "";
+    if (cartBoxesDiv) cartBoxesDiv.innerHTML = "";
+
+    updateBadge();
 
     if (cart.length === 0) {
-      cartItemsTbody.innerHTML =
-        '<tr><td colspan="5" style="text-align:center;">Votre panier est vide.</td></tr>';
-      cartTotalDiv.textContent = "Total : 0 FCFA";
-      clearCartBtn.disabled = true;
-      checkoutBtn.disabled = true;
+      if (cartItemsTbody) {
+        cartItemsTbody.innerHTML =
+          '<tr><td colspan="5" style="text-align:center; padding: 40px; color: #8c8882;">Votre panier est actuellement vide.</td></tr>';
+      }
+      if (cartBoxesDiv) {
+        cartBoxesDiv.innerHTML =
+          '<p style="text-align:center; padding: 30px; color: #8c8882;">Votre panier est actuellement vide.</p>';
+      }
+      if (cartTotalDiv) cartTotalDiv.textContent = "Total : 0 FCFA";
+      if (clearCartBtn) clearCartBtn.disabled = true;
+      if (checkoutBtn) checkoutBtn.disabled = true;
       return;
     }
 
-    clearCartBtn.disabled = false;
-    checkoutBtn.disabled = false;
+    if (clearCartBtn) clearCartBtn.disabled = false;
+    if (checkoutBtn) checkoutBtn.disabled = false;
 
     let total = 0;
 
@@ -47,47 +67,54 @@ document.addEventListener("DOMContentLoaded", () => {
       const sousTotal = item.price * item.quantity;
       total += sousTotal;
 
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td data-label="Produit">${item.name}</td>
-        <td data-label="Prix unitaire">${formatPrice(item.price)}</td>
-        <td data-label="Quantité">
-          <input type="number" min="1" value="${item.quantity}" class="qty-input" data-id="${item.id}">
-        </td>
-        <td data-label="Sous-total">${formatPrice(sousTotal)}</td>
-        <td data-label="Actions">
-          <button class="btn-remove" data-id="${item.id}" aria-label="Supprimer produit">&times;</button>
-        </td>
-      `;
-      cartItemsTbody.appendChild(tr);
+      if (cartItemsTbody) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td data-label="Produit"><strong>${item.name}</strong></td>
+          <td data-label="Prix unitaire">${formatPrice(item.price)}</td>
+          <td data-label="Quantité">
+            <input type="number" min="1" value="${item.quantity}" class="qty-input" data-id="${item.id}">
+          </td>
+          <td data-label="Sous-total"><strong style="color: #9e7d1e;">${formatPrice(sousTotal)}</strong></td>
+          <td data-label="Actions">
+            <button class="btn-remove" data-id="${item.id}" aria-label="Supprimer produit">&times;</button>
+          </td>
+        `;
+        cartItemsTbody.appendChild(tr);
+      }
 
-      const box = document.createElement("div");
-      box.className = "cart-box";
-      box.innerHTML = `
-        <div class="produit-nom">${item.name}</div>
-        <div class="produit-prix">Prix unitaire : ${formatPrice(item.price)}</div>
-        <div class="produit-quantity">
-          Quantité: <input type="number" min="1" value="${item.quantity}" class="qty-input" data-id="${item.id}">
-        </div>
-        <div class="produit-subtotal">Sous-total : ${formatPrice(sousTotal)}</div>
-        <div class="actions">
-          <button class="btn-remove" data-id="${item.id}" aria-label="Supprimer produit">Supprimer</button>
-        </div>
-      `;
-      cartBoxesDiv.appendChild(box);
+      if (cartBoxesDiv) {
+        const box = document.createElement("div");
+        box.className = "cart-box";
+        box.innerHTML = `
+          <div class="produit-nom">${item.name}</div>
+          <div class="produit-prix">Prix unitaire : ${formatPrice(item.price)}</div>
+          <div class="produit-quantity">
+            Quantité: <input type="number" min="1" value="${item.quantity}" class="qty-input" data-id="${item.id}">
+          </div>
+          <div class="produit-subtotal">Sous-total : ${formatPrice(sousTotal)}</div>
+          <div class="actions">
+            <button class="btn-remove" data-id="${item.id}" aria-label="Supprimer produit">&times; Supprimer</button>
+          </div>
+        `;
+        cartBoxesDiv.appendChild(box);
+      }
     });
 
-    cartTotalDiv.textContent = `Total : ${formatPrice(total)}`;
+    if (cartTotalDiv) {
+      cartTotalDiv.innerHTML = `Total : <span style="color: #fcedc2;">${formatPrice(total)}</span>`;
+    }
   }
 
   function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
+    updateBadge();
   }
 
   function updateQuantity(e) {
     if (!e.target.classList.contains("qty-input")) return;
     const id = e.target.dataset.id;
-    let newQty = parseInt(e.target.value);
+    let newQty = parseInt(e.target.value, 10);
     if (isNaN(newQty) || newQty < 1) newQty = 1;
     e.target.value = newQty;
 
@@ -100,109 +127,111 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function removeItem(e) {
-    if (!e.target.classList.contains("btn-remove")) return;
-    const id = e.target.dataset.id;
+    const target = e.target.closest(".btn-remove");
+    if (!target) return;
+    const id = target.dataset.id;
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart = cart.filter((item) => item.id !== id);
     saveCart(cart);
     loadCart();
-    showNotification("Produit supprimé.");
+    showNotification("Article retiré du panier.");
   }
 
-  cartItemsTbody.addEventListener("input", updateQuantity);
-  cartBoxesDiv.addEventListener("input", updateQuantity);
+  if (cartItemsTbody) {
+    cartItemsTbody.addEventListener("input", updateQuantity);
+    cartItemsTbody.addEventListener("click", removeItem);
+  }
 
-  cartItemsTbody.addEventListener("click", removeItem);
-  cartBoxesDiv.addEventListener("click", removeItem);
+  if (cartBoxesDiv) {
+    cartBoxesDiv.addEventListener("input", updateQuantity);
+    cartBoxesDiv.addEventListener("click", removeItem);
+  }
 
-  clearCartBtn.addEventListener("click", () => {
-    localStorage.removeItem("cart");
-    loadCart();
-    showNotification("Panier vidé avec succès !");
-  });
-
-  // ----------- MODIFICATION ICI ------------------
-
-  // Ouvrir popup au clic valider commande sans vider panier
-  checkoutBtn.addEventListener("click", () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cart.length === 0) {
-      showNotification("Votre panier est vide.");
-      return;
-    }
-
-    // Injection résumé panier dans popup
-    cartSummaryItems.innerHTML = "";
-    cart.forEach((item) => {
-      const li = document.createElement("li");
-      li.textContent = `${item.name} x ${item.quantity} = ${formatPrice(item.price * item.quantity)}`;
-      cartSummaryItems.appendChild(li);
+  if (clearCartBtn) {
+    clearCartBtn.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      loadCart();
+      showNotification("Votre panier a été vidé.");
     });
+  }
 
-    popupOverlay.classList.remove("hidden");
-  });
-
-  // Fermer popup
-  closeBtn.addEventListener("click", () => {
-    popupOverlay.classList.add("hidden");
-  });
-
-  popupOverlay.addEventListener("click", e => {
-    if (e.target === popupOverlay) {
-      popupOverlay.classList.add("hidden");
-    }
-  });
-
-  // Soumettre formulaire de commande dans popup
-  orderForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cart.length === 0) {
-      showNotification("Votre panier est vide.");
-      popupOverlay.classList.add("hidden");
-      return;
-    }
-
-    const formData = new FormData(orderForm);
-    const prenom = formData.get("prenom").trim();
-    const nom = formData.get("nom").trim();
-    const numero = formData.get("numero").trim();
-    const number = formData.get("num").trim();
-    const pays = formData.get("pays").trim();
-    const ville = formData.get("ville").trim();
-    const commune = formData.get("commune").trim();
-
-    let message = `Salut, j’ai commandé depuis le site BioDrey. Voici mes coordonnées :%0A`;
-    message += `Prénom : ${prenom}%0ANom : ${nom}%0ANuméro pour la livraison:${number}%0AVoici la date a laquelle je serai disponible pour la livraison : ${numero}%0A%0A`;
-    message += `Articles commandés :%0A`;
-
-    let total = 0;
-    cart.forEach(item => {
-      const st = item.price * item.quantity;
-      total += st;
-      message += `- ${item.name} x ${item.quantity} = ${formatPrice(st)}%0A`;
+  // Ouvrir modal de confirmation
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener("click", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        showNotification("Votre panier est vide.");
+        return;
+      }
+      if (popupOverlay) popupOverlay.classList.remove("hidden");
     });
-    message += `%0ATotal : ${formatPrice(total)}%0A%0A`;
+  }
 
-    message += `Adresse : ${commune}, ${ville}, ${pays}`;
+  // Fermer modal
+  if (closeBtn && popupOverlay) {
+    closeBtn.addEventListener("click", () => {
+      popupOverlay.classList.add("hidden");
+    });
+  }
 
-    const phoneNumber = "2250566429316"; // remplace par ton numéro
+  if (popupOverlay) {
+    popupOverlay.addEventListener("click", (e) => {
+      if (e.target === popupOverlay) {
+        popupOverlay.classList.add("hidden");
+      }
+    });
+  }
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
+  // Soumission WhatsApp
+  if (orderForm) {
+    orderForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    // Vider le panier après ouverture WhatsApp
-    localStorage.removeItem("cart");
-    loadCart();
-    popupOverlay.classList.add("hidden");
-    orderForm.reset();
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        showNotification("Votre panier est vide.");
+        if (popupOverlay) popupOverlay.classList.add("hidden");
+        return;
+      }
 
-    showNotification("Commande envoyée !");
-  });
+      const nom = document.getElementById("cust-name") ? document.getElementById("cust-name").value.trim() : "";
+      const tel = document.getElementById("cust-contact") ? document.getElementById("cust-contact").value.trim() : "";
+      const lieu = document.getElementById("cust-lieu") ? document.getElementById("cust-lieu").value.trim() : "";
+      const dateLivraison = document.getElementById("cust-date") ? document.getElementById("cust-date").value.trim() : "";
 
-  // Chargement initial
+      let message = `✨ *NOUVELLE COMMANDE BIO-DREY* ✨%0A%0A`;
+      message += `👤 *Client :* ${encodeURIComponent(nom)}%0A`;
+      message += `📞 *WhatsApp / Tél :* ${encodeURIComponent(tel)}%0A`;
+      message += `📍 *Lieu de livraison :* ${encodeURIComponent(lieu)}%0A`;
+      if (dateLivraison) {
+        message += `📅 *Date souhaitée :* ${encodeURIComponent(dateLivraison)}%0A`;
+      }
+      message += `%0A🛍️ *ARTICLES COMMANDÉS :*%0A`;
+
+      let total = 0;
+      cart.forEach((item) => {
+        const st = item.price * item.quantity;
+        total += st;
+        message += `• ${encodeURIComponent(item.name)} (x${item.quantity}) : ${formatPrice(st)}%0A`;
+      });
+
+      message += `%0A💰 *TOTAL À PAYER : ${formatPrice(total)}*%0A`;
+      message += `💳 *Statut Dépôt :* Effectué sur le +225 0566429316`;
+
+      const phoneNumber = "2250566429316";
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+      window.open(whatsappUrl, "_blank");
+
+      // Vider le panier
+      localStorage.removeItem("cart");
+      loadCart();
+      if (popupOverlay) popupOverlay.classList.add("hidden");
+      orderForm.reset();
+
+      showNotification("Commande transmise avec succès sur WhatsApp !");
+    });
+  }
+
   loadCart();
 });
-
-

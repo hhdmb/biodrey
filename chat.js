@@ -16,7 +16,9 @@ const questions = {
     ["Comment utiliser le spray Bio-Drey?", "Le Spray Bio-Drey est un soin sans rinçage (125 ml) qui nourrit et hydrate intensément vos cheveux. Il referme les cuticules, limite la casse et stimule la pousse rapide. Intégrez-le à votre routine capillaire pour retrouver éclat, souplesse et vitalité."],
     ["Comment utiliser la pommade de cheveux Bio-Drey ?", "La Pommade Bio-Drey (200 ml) est un soin sans rinçage qui hydrate et protège durablement vos cheveux. Elle réduit la casse, prévient la décoloration et renforce la fibre capillaire, tout en gardant vos cheveux doux et éclatants."],
     ["Comment utiliser le sérum d’huile Bio-Drey ?", "Le Sérum d’huile Bio-Drey (60 ml) mélange 3 huiles végétales et 5 plantes pour favoriser la pousse, donner du volume et traiter les problèmes comme l’alopécie, les démangeaisons ou pellicules. Appliquez-le sur les zones concernées pour des résultats visibles."],
-    ["Comment utiliser le shampoing démêlant Bio-Drey ?", "Le shampoing démêlant Bio-Drey est un soin 2 en 1 qui nettoie en profondeur le cuir chevelu, élimine pellicules, teignes, boutons et poux, tout en démêlant vos cheveux. Utilisez-le comme un shampoing classique, puis rincez abondamment."]
+    ["Comment utiliser le shampoing démêlant Bio-Drey ?", "Le shampoing démêlant Bio-Drey est un soin 2 en 1 qui nettoie en profondeur le cuir chevelu, élimine pellicules, teignes, boutons et poux, tout en démêlant vos cheveux. Utilisez-le comme un shampoing classique, puis rincez abondamment."],
+    ["Comment utiliser le Sérum d’Or (Visage & Corps) ?", "Pour le visage : appliquez quelques gouttes sur peau propre et massez jusqu'à pénétration. Pour le corps : appliquez sur zones à traiter ou mélangez à votre lait corporel. Appliquez de préférence le soir."],
+    ["Comment utiliser le Savon Or Noir ?", "Faites mousser le savon avec un peu d'eau, appliquez sur le visage ou le corps humidifié, massez délicatement en mouvements circulaires, laissez poser 1 à 2 minutes puis rincez abondamment à l'eau claire."]
   ]
 };
 

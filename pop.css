@@ -1,10 +1,6 @@
-:root {
-  --main-color: #d7a10d;
-  --text-color: #000000;
-  --bg-color: #ffffff;
-  --bge-color: #e5e3e3;
-  --font-size-small: 14.5px;
-}
+/* ==========================================================================
+   BIO-DREY — LUXURY ORDER MODAL & POPUP (POP.CSS)
+   ========================================================================== */
 
 .popup-overlay {
   position: fixed;
@@ -12,59 +8,151 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(14, 13, 12, 0.75);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
+  animation: fadeInModal 0.35s var(--ease-luxury);
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .popup-content {
-  background: var(--bg-color);
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 95%;
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gold-primary);
+  max-width: 520px;
+  width: 92%;
   position: relative;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  color: var(--text-color);
-  font-size: var(--font-size-small);
+  box-shadow: var(--shadow-luxury), var(--gold-glow);
+  color: var(--noir-obsidian);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: scaleUpModal 0.4s var(--ease-luxury);
+}
+
+@keyframes scaleUpModal {
+  from { transform: scale(0.92) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.popup-content h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--noir-obsidian);
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.popup-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--gold-gradient);
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .close-btn {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 18px;
+  right: 18px;
   font-size: 24px;
-  font-weight: bold;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-cream);
+  border: 1px solid var(--border-gold);
+  transition: all var(--transition-fast);
 }
 
-input[type="text"] {
+.close-btn:hover {
+  color: var(--noir-obsidian);
+  background: var(--gold-gradient);
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="date"],
+.popup-content input[type="number"],
+.popup-content select {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid var(--bge-color);
-  border-radius: 6px;
-  font-size: var(--font-size-small);
+  padding: 13px 16px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  background: var(--bg-cream);
+  color: var(--noir-obsidian);
+  transition: all var(--transition-fast);
 }
 
-.btn-success {
-  background-color: var(--main-color);
-  color: #fff;
+.popup-content input:focus,
+.popup-content select:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  background: #ffffff;
+  box-shadow: var(--gold-glow);
+}
+
+.popup-content .payment-info {
+  background: var(--noir-obsidian);
+  color: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.popup-content .payment-info strong {
+  color: var(--gold-light);
+}
+
+.popup-content .btn-submit-order {
+  width: 100%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #ffffff;
   border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 16px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
-  font-weight: bold;
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transition: all var(--transition-smooth);
 }
 
-.btn-success:hover {
-  background-color: #b78f0c;
+.popup-content .btn-submit-order:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
 }

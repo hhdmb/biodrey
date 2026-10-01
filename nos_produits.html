@@ -3,491 +3,504 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bio-Drey</title>
-
-  <!-- Google Fonts : Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome CDN pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Lien vers le fichier CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Boutique Officielle | Bio-Drey Soins Naturels de Luxe</title>
+  <meta name="description" content="Découvrez notre collection exclusive de cosmétiques 100% naturels et bio : packs prestige, sérum d'or, soins capillaires et savon noir. Livraison rapide.">
   <link rel="icon" href="bio drey.jpg"/>
+
+  <!-- Google Fonts : Playfair Display, Cinzel, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="produits.css">
-
-  <!-- Titre de la page (différent sur chaque page) -->
-<title>Produits capillaires Bio Drey | Naturel et efficace</title>
-
-<!-- Description courte (moins de 160 caractères) -->
-<meta name="description" content="Découvrez les produits capillaires Bio Drey pour cheveux naturels, sains et brillants. Livraison rapide.">
-
-<!-- Pour mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Langue -->
-<html lang="fr">
-
-<!-- Canonical URL (important pour éviter les doublons) -->
-<link rel="canonical" href="https://bio-drey.site/nos_produits.html" />
-
-<!-- Meta Facebook / Open Graph -->
-<meta property="og:title" content="Produits capillaires Bio Drey" />
-<meta property="og:description" content="Des soins capillaires naturels adaptés à tous types de cheveux." />
-<meta property="og:image" content="https://bio-drey.site/images/image-partage.jpg" />
-<meta property="og:url" content="https://bio-drey.site" />
-<meta property="og:type" content="website" />
-
-<!-- Meta Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bio Drey - Soins capillaires naturels">
-<meta name="twitter:description" content="Des produits naturels pour cheveux crépus, bouclés ou lisses.">
-<meta name="twitter:image" content="https://bio-drey.site/images/image-partage.jpg">
-
 </head>
 <body>
 
+  <!-- Top Announcement Bar -->
   <div class="top-header">
     <div class="top-header-left">
-      <a href="#">À propos</a>
-      <a href="assistant_clientele.html">Aide</a>
-      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#about"><i class="fas fa-gem"></i> Maison Bio-Drey</a>
+      <a href="assistant_clientele.html"><i class="fas fa-headset"></i> Service Concierge 24/7</a>
+      <a href="index.html#faq"><i class="fas fa-circle-question"></i> FAQ</a>
     </div>
     <div class="top-header-right">
-      <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.facebook.com/share/1CY4r3SbZq/"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://wa.me/2250566429316"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@bio.drey" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1CY4r3SbZq/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/2250566429316" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 
-<header class="main-header">
-  <!-- Partie gauche : logo + nom -->
-  <a href="#"><div class="header-mobile-left">
-    <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
-    <h1 class="brand-name">
-      <span class="gold">Bio-</span><span class="black">Drey</span>
-    </h1>
-  </div></a>
-
-  <!-- Partie centre mobile : icône panier -->
-  <div class="header-mobile-center">
-    <a href="panier.html" class="cart-icon">
-      <i class="fas fa-shopping-cart"></i>
+  <!-- Main Luxury Header -->
+  <header class="main-header">
+    <a href="index.html" class="header-mobile-left">
+      <img src="bio drey.jpg" alt="Logo Bio-Drey" class="logo-img">
+      <h1 class="brand-name">
+        <span class="gold">Bio-</span><span class="black">Drey</span>
+      </h1>
     </a>
-  </div>
 
-  <!-- Menu burger à droite (mobile) -->
-  <div class="burger" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </div>
+    <div class="header-mobile-center">
+      <a href="panier.html" class="cart-icon" aria-label="Panier">
+        <i class="fas fa-shopping-bag"></i>
+      </a>
+    </div>
 
-  <!-- Menu desktop visible uniquement sur PC -->
-  <nav class="header-desktop-nav">
+    <div class="burger" onclick="toggleMenu()" aria-label="Menu Mobile">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="header-desktop-nav">
+      <a href="index.html">Accueil</a>
+      <a href="nos_produits.html" class="active">La Boutique</a>
+      <a href="assistant_clientele.html#contact">Contact</a>
+      <a href="assistant_clientele.html">Assistance VIP</a>
+      <a href="panier.html" class="cart-link">
+        <i class="fas fa-shopping-bag"></i> Panier
+        <span class="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Accueil</a>
-    <a href="nos_produits.html">Nos Produits</a>
+    <a href="nos_produits.html" class="active">La Boutique</a>
     <a href="assistant_clientele.html#contact">Contact</a>
-     <a href="assistant_clientele.html">Assistance clientèle</a>
+    <a href="assistant_clientele.html">Assistance VIP</a>
     <a href="panier.html" class="cart-link">
-      <i class="fas fa-shopping-cart"></i> Panier
+      <i class="fas fa-shopping-bag"></i> Mon Panier
     </a>
-  </nav>
-</header>
+  </div>
 
-<!-- Menu mobile déroulant -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Accueil</a>
-<a href="nos_produits.html">Nos Produits</a>
-    <a href="assistant_clientele.html#contact">Contact</a>
-     <a href="assistant_clientele.html">Assistance clientèle</a>
-  <a href="panier.html" class="cart-link">
-    <i class="fas fa-shopping-cart"></i> Panier
-  </a>
-</div>
- <div class="pub-bar">
-    <button class="nav-arrow left">&#10094;</button>
-    
+  <!-- Promotion Slider -->
+  <div class="pub-bar">
+    <button class="nav-arrow left" aria-label="Précédent">&#10094;</button>
     <div class="slider-container">
       <div class="slider">
         <div class="slide">
-          <p>Commandez et faites vous livrer 24H/24</p>
-         
+          <p>Livraison Express 24h & Expéditions Internationales</p>
         </div>
         <div class="slide">
-          <p>Notre assistant clientèle vous répond 24H/24</p>
-          
+          <p>Ingrédients 100% Biologiques & Formules Authentiques</p>
         </div>
       </div>
     </div>
-    
-    <button class="nav-arrow right">&#10095;</button>
+    <button class="nav-arrow right" aria-label="Suivant">&#10095;</button>
   </div>
 
-<header class="page-header">
-  <h1><span class="gold">Bio-</span><span class="black">Drey Boutique</span></h1>
-</header>
-<section class="packaging-container">
-     <h2 class="faq-title">Packaging de nos produits</h2>
-  <div class="produit-box" data-id="pack1">
-    <div class="produit-image">
-      <img src="GAMME COMPLETE.jpg" alt="PACK Gamme complète">
+  <!-- Boutique Header Banner -->
+  <header class="page-header">
+    <h2>Collection <span class="gold">Haute Cosmétique</span></h2>
+    <p>Des soins d'exception à base d'huiles rares et d'extraits botaniques précieux pour révéler l'éclat de vos cheveux et de votre peau.</p>
+  </header>
+
+  <!-- Category Filter Pills -->
+  <div class="category-filter-bar">
+    <a href="#packs" class="filter-pill active"><i class="fas fa-crown"></i> Packs Privilèges</a>
+    <a href="#visage-corps" class="filter-pill"><i class="fas fa-sparkles"></i> Soins Visage & Corps</a>
+    <a href="#capillaires" class="filter-pill"><i class="fas fa-leaf"></i> Soins Capillaires</a>
+    <a href="#accessoires" class="filter-pill"><i class="fas fa-gem"></i> Accessoires</a>
+  </div>
+
+  <!-- ===== PACKS PRIVILÈGES ===== -->
+  <section class="packaging-container" id="packs">
+    <h2 class="faq-title">
+      <span>👑 Packs & Rituels Privilèges</span>
+    </h2>
+
+    <!-- PACK Gamme complète -->
+    <div class="produit-box" data-id="pack1">
+      <div class="produit-image">
+        <span class="kit-badge">Rituel Complet</span>
+        <img src="GAMME COMPLETE.jpg" alt="PACK Gamme complète Bio-Drey">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(5.0 • 128 avis)</span>
+        </div>
+        <h3 class="produit-nom">PACK - Gamme Complète Intense</h3>
+        <p class="produit-description">
+          Obtenez tous les soins essentiels de la gamme BIO DREY dans un seul pack : sérum huile, spray hydratant, pommade réparatrice et shampoing purifiant. Idéal pour une transformation capillaire rapide.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="15000">15 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
     </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">PACK - Gamme complète</h3>
-      <p class="produit-description">
-        Obtenez tous les soins essentiels de la gamme BIO DREY dans un seul pack : sérum huile, spray, pommade et shampoing. Idéal pour une routine capillaire complète et efficace.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="15000">Prix : 15 000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
+
+    <!-- PACK Duo Spray + Huile -->
+    <div class="produit-box" data-id="pack2">
+      <div class="produit-image">
+        <span class="kit-badge">Best-Seller</span>
+        <img src="DUO.jpg" alt="PACK Duo Spray + Huile Bio-Drey">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.9 • 240 avis)</span>
+        </div>
+        <h3 class="produit-nom">PACK - Duo Spray + Sérum Huile</h3>
+        <p class="produit-description">
+          Associez l'efficacité du spray hydratant et du sérum d'huile pour stimuler la pousse rapide, combler les tempes dégarnies et apaiser le cuir chevelu.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="8000">8 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- KIT Sérum d'Or + Or Noir -->
+    <div class="produit-box" data-id="pack3">
+      <div class="produit-image">
+        <span class="kit-badge">Édition Spéciale</span>
+        <span class="new-badge">Nouveau</span>
+        <img src="KIT SERUM SAVON.jpg" alt="Kit Sérum d'Or + Or Noir Bio-Drey">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(5.0 • 96 avis)</span>
+        </div>
+        <h3 class="produit-nom">KIT SUBLIMATEUR - Sérum d'Or + Or Noir</h3>
+        <p class="produit-description">
+          Le duo par excellence pour un teint zéro défaut : combine le SÉRUM D'OR et le savon naturel OR NOIR pour purifier la peau, effacer les taches et boutons, et révéler un teint éclatant et soyeux.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="9000">9 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SOINS VISAGE & CORPS (NOUVEAU) ===== -->
+  <section class="soins-container" id="visage-corps">
+    <h2 class="faq-title">
+      <span>✨ Soins d'Exception Visage & Corps</span>
+    </h2>
+
+    <!-- SÉRUM D'OR -->
+    <div class="produit-box" data-id="prod8">
+      <div class="produit-image">
+        <span class="new-badge">Nouveau</span>
+        <img src="SERUM HUILE.jpg" alt="Sérum d'Or Bio-Drey - Sérum d'huile visage et corps">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(5.0 • 74 avis)</span>
+        </div>
+        <h3 class="produit-nom">SÉRUM D'OR - Huile Visage & Corps</h3>
+        <p class="produit-description">
+          Sérum d'huile précieux aux extraits de plantes médicinales. Élimine les taches sombres, boutons et marques d'imperfections tout en nourrissant intensément. Convient à tous types de peaux.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="5000">5 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- OR NOIR -->
+    <div class="produit-box" data-id="prod9">
+      <div class="produit-image">
+        <span class="new-badge">Nouveau</span>
+        <img src="SAVON OR NOIR.jpg" alt="Or Noir Bio-Drey - Savon corps naturel">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.9 • 88 avis)</span>
+        </div>
+        <h3 class="produit-nom">OR NOIR - Savon Purifiant & Éclat</h3>
+        <p class="produit-description">
+          Savon noir naturel formulé pour purifier les pores en profondeur. Élimine cellules mortes, toxines et imperfections pour un teint unifié, velouté et resplendissant dès la première utilisation.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="5000">5 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== SOINS CAPILLAIRES ===== -->
+  <section class="produits-container" id="capillaires">
+    <h2 class="faq-title">
+      <span>🌿 Soins Capillaires Naturels</span>
+    </h2>
+
+    <!-- Sérum d'huile capillaire -->
+    <div class="produit-box" data-id="prod1">
+      <div class="produit-image">
+        <img src="SERUM HUILE BIO DREY.jpg" alt="Sérum d'huile Bio-Drey 60ml">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.9 • 312 avis)</span>
+        </div>
+        <h3 class="produit-nom">SÉRUM D'HUILE CAPILLAIRE (60 ml)</h3>
+        <p class="produit-description">
+          Mélange noble de 3 huiles végétales pures et 5 plantes médicinales. Traite la calvitie, l'alopécie, les pellicules et stimule puissamment la régénération capillaire.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="5000">5 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- Spray Capillaire -->
+    <div class="produit-box" data-id="prod2">
+      <div class="produit-image">
+        <img src="spray bio drey.jpg" alt="Spray Bio-Drey 125ml">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.8 • 185 avis)</span>
+        </div>
+        <h3 class="produit-nom">SPRAY REVITALISANT (125 ml)</h3>
+        <p class="produit-description">
+          Concentré d'extraits végétaux et d'épices tonifiantes. Hydrate en profondeur, scelle les écailles de la fibre et prévient la casse au quotidien.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="3000">3 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- Pommade Capillaire -->
+    <div class="produit-box" data-id="prod3">
+      <div class="produit-image">
+        <img src="pommade bio drey.jpg" alt="Pommade Bio-Drey 200ml">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.9 • 142 avis)</span>
+        </div>
+        <h3 class="produit-nom">BAUME NOURRISSANT (200 ml)</h3>
+        <p class="produit-description">
+          Soin protecteur riche sans rinçage. Fortifie la fibre capillaire, scelle l'hydratation durablement et maintient la brillance naturelle.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="3000">3 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- Shampoing Démêlant -->
+    <div class="produit-box" data-id="prod4">
+      <div class="produit-image">
+        <img src="SHAMPOING BIO DREY.jpg" alt="Shampoing démêlant Bio-Drey">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.8 • 160 avis)</span>
+        </div>
+        <h3 class="produit-nom">SHAMPOING CLARIFIANT 2-EN-1</h3>
+        <p class="produit-description">
+          Purifie le cuir chevelu en profondeur, élimine pellicules, impuretés et résidus tout en facilitant le démêlage sans agresser la fibre.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="4000">4 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== ACCESSOIRES ===== -->
+  <section class="produits-container" id="accessoires">
+    <h2 class="faq-title">
+      <span>💎 Accessoires de Précision</span>
+    </h2>
+
+    <div class="produit-box" data-id="prod5">
+      <div class="produit-image">
+        <img src="derma roller.jpeg" alt="Derma roller original">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(5.0 • 98 avis)</span>
+        </div>
+        <h3 class="produit-nom">Derma Roller Micro-Needling</h3>
+        <p class="produit-description">
+          Micro-aiguilles en titane qui stimulent la micro-circulation, réveillent les follicules dormants et décuplent l'absorption des sérums.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="5000">5 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="produit-box" data-id="prod6">
+      <div class="produit-image">
+        <img src="brosse shamp.jpeg" alt="Brosse massante stimulante">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.9 • 87 avis)</span>
+        </div>
+        <h3 class="produit-nom">Brosse Scalp Massante</h3>
+        <p class="produit-description">
+          Picots doux en silicone médical pour exfolier le cuir chevelu en douceur, stimuler l'afflux sanguin et détendre les tensions.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="3000">3 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="produit-box" data-id="prod7">
+      <div class="produit-image">
+        <img src="applicateur cheveux.jpeg" alt="Applicateur sérum de précision">
+      </div>
+      <div class="produit-info">
+        <div class="produit-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span>(4.8 • 53 avis)</span>
+        </div>
+        <h3 class="produit-nom">Applicateur Précision Cuir Chevelu</h3>
+        <p class="produit-description">
+          Permet d'appliquer vos huiles et lotions de manière ciblée directement aux racines, sans gaspillage ni coulures.
+        </p>
+        <div class="produit-prix-options">
+          <span class="produit-prix" data-prix="3000">3 000 FCFA</span>
+          <div class="quantite-selector">
+            <button class="moins" aria-label="Diminuer">−</button>
+            <input type="number" min="1" value="1" class="quantite-input">
+            <button class="plus" aria-label="Augmenter">+</button>
+          </div>
+        </div>
+        <button class="btn-commander">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="notification-popup" class="popup-notif">
+    <p id="notification-message"></p>
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section info">
+        <img src="bio drey.jpg" alt="Logo Bio-Drey" class="footer-logo" />
+        <p><strong>Téléphone Direct :</strong> +225 05 66 42 93 16</p>
+        <p><strong>Boutiques :</strong> Abidjan Riviera Palmeraie & Bouaké, Côte d'Ivoire</p>
+        <p><strong>Email :</strong> biodreyafrica@gmail.com</p>
+      </div>
+
+      <div class="footer-section nav">
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="nos_produits.html">La Boutique</a>
+        <a href="assistant_clientele.html#contact">Contact</a>
+        <a href="assistant_clientele.html">Assistance VIP</a>
+        <a href="panier.html">Mon Panier</a>
+      </div>
+
+      <div class="footer-section faq">
+        <h4>Informations</h4>
+        <a href="assistant_clientele.html">Livraison & Délais</a>
+        <a href="assistant_clientele.html">Conseils d'utilisation</a>
+        <a href="assistant_clientele.html">Modes de Paiement</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <div class="footer-section social">
+        <h4>Suivez Notre Maison</h4>
+        <div class="social-icons" style="justify-content: flex-start;">
+          <a href="https://www.facebook.com/share/1CY4r3SbZq/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/2250566429316" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:biodreyafrica@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@bio.drey" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
-      <button class="btn-commander">Commander</button>
     </div>
-  </div>
-
-  <div class="produit-box" data-id="pack2">
-    <div class="produit-image">
-      <img src="DUO.jpg" alt="PACK Duo - Spray + Huile">
+    <div class="footer-bottom">
+      &copy; 2026 Maison Bio-Drey. Tous droits réservés. Cosmétiques naturels d'exception.
     </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">PACK - Duo Spray + Huile</h3>
-      <p class="produit-description">
-        Associez l’efficacité du spray hydratant et du sérum d’huile pour booster la pousse de vos cheveux et traiter les affections courantes du cuir chevelu.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="8000">Prix : 8 000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
+  </footer>
 
-</section>
-
-
- <section class="produits-container">
- <h2 class="faq-title">Tous  nos produits</h2>
-  <div class="produit-box" data-id="prod1">
-    <div class="produit-image">
-      <img src="SERUM HUILE BIO DREY.jpg" alt="SÉRUM D’HUILE - Soin sans rinçage (60 ml)">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">SÉRUM D’HUILE - Soin sans rinçage (60 ml)</h3>
-      <p class="produit-description">
-        L’huile BIO DREY est un mélange de 3 huiles végétales et de 5 plantes sélectionnées pour favoriser la pousse des cheveux, leur donner du volume et traiter plusieurs affections capillaires. Elle aide à lutter contre l’alopécie, la chute de cheveux, les démangeaisons, les pellicules, la teigne et la perte de la ligne frontale.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="5000">Prix : 5000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-  <div class="produit-box" data-id="prod2">
-    <div class="produit-image">
-      <img src="spray bio drey.jpg" alt="SPRAY - Soin sans rinçage (125 ml)">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">SPRAY - Soin sans rinçage (125 ml)</h3>
-      <p class="produit-description">
-        Le Spray BIO DREY est un concentré de plantes et d'épices qui nourrit et hydrate intensément les cheveux. Il referme les cuticules, limite la casse et stimule la pousse rapide des cheveux. Intégré dans une routine capillaire, il redonne éclat, souplesse et vitalité à votre chevelure.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="3000">Prix : 3000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-  <div class="produit-box" data-id="prod3">
-    <div class="produit-image">
-      <img src="pommade bio drey.jpg" alt="POMMADE DE CHEVEUX - Soin sans rinçage (200 ml)">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">POMMADE DE CHEVEUX - Soin sans rinçage (200 ml)</h3>
-      <p class="produit-description">
-        La Pommade BIO DREY préserve l’hydratation des cheveux et les protège durablement. Elle aide à réduire la casse, prévient la décoloration et renforce la fibre capillaire, tout en maintenant vos cheveux doux et éclatants.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="3000">Prix : 3000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-  <div class="produit-box" data-id="prod4">
-    <div class="produit-image">
-      <img src="SHAMPOING BIO DREY.jpg" alt="SHAMPOING DEMELANT BioDrey est un soin 2 en 1">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">SHAMPOING DEMELANT BioDrey est un soin 2 en 1</h3>
-      <p class="produit-description">
-        Le shampoing démêlant BioDrey est un soin 2 en 1. Il nettoie en profondeur le cuir chevelu, débouche les pores et élimine les impuretés telles que les pellicules, les plaques, les teignes, les boutons et les poux.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="4000">Prix : 4000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-
-  <div class="produit-box" data-id="prod5">
-    <div class="produit-image">
-      <img src="derma roller.jpeg" alt="SHAMPOING DEMELANT BioDrey est un soin 2 en 1">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">Derma roller original</h3>
-      <p class="produit-description">
-        outil de micro-aiguilles qui stimule la peau, améliore le grain, favorise la pousse et l’absorption des soins.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="5000">Prix : 5000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-  <div class="produit-box" data-id="prod6">
-    <div class="produit-image">
-      <img src="brosse shamp.jpeg" alt="SHAMPOING DEMELANT BioDrey est un soin 2 en 1">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">Brosse à shampooing </h3>
-      <p class="produit-description">
-        nettoie en profondeur, stimule le cuir chevelu, active la circulation et aide à réduire les pellicules.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="3000">Prix : 3000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-  <div class="produit-box" data-id="prod7">
-    <div class="produit-image">
-      <img src="applicateur cheveux.jpeg" alt="SHAMPOING DEMELANT BioDrey est un soin 2 en 1">
-    </div>
-    <div class="produit-info">
-      <h3 class="produit-nom">Applicateur pour cheveux </h3>
-      <p class="produit-description">
-        permet d’appliquer huiles ou soins facilement, uniformément et directement sur le cuir chevelu.
-      </p>
-      <div class="produit-prix-options">
-        <span class="produit-prix" data-prix="3000">Prix : 3000 FCFA</span>
-        <div class="quantite-selector">
-          <button class="moins">−</button>
-          <input type="number" min="1" value="1" class="quantite-input">
-          <button class="plus">+</button>
-        </div>
-      </div>
-      <button class="btn-commander">Commander</button>
-    </div>
-  </div>
-
-</section>
-
-
-
-
-<!-- Notification popup -->
-<div id="notification-popup" class="popup-notif">
-  <p id="notification-message"></p>
-</div>
-
-<footer class="footer">
-  <div class="footer-container">
-    <!-- 1. Infos / Logo -->
-    <div class="footer-section info">
-      <img src="bio drey.jpg" alt="Logo" class="footer-logo" />
-      <p><strong>Numéro :</strong> +225  0566429316</p>
-      <p><strong>Adresse :</strong> Abidjan Rivera palmeraie, Côte d'Ivoire <br>
-      Bouaké quartier France et rue des commerces, Côte d'Ivoire </p>
-      <p><strong>Email :</strong> biodreyafrica@gmail.com</p>
-    </div>
-
-    <!-- 2. Navigation -->
-    <div class="footer-section nav">
-      <h4>Navigation</h4>
-      <a href="index.html">Accueil</a>
-      <a href="nos_produits.html">Nos Produits</a>
-      <a href="assistant_clientele.html#contact">Contact</a>
-      <a href="assistant_clientele.html">Assistance clientèle</a>
-      <a href="panier.html" class="cart-link"> Panier</a>
-      <a href="#">À propos</a>
-      <a href="assistant_clientele.html">Aide</a>
-    </div>
-
-    <!-- 3. FAQ -->
-    <div class="footer-section faq">
-      <h4>FAQ</h4>
-      <a href="assistant_clientele.html">Livraison</a>
-      <a href="assistant_clientele.html">Retours & Remboursements</a>
-      <a href="assistant_clientele.html">Suivi de commande</a>
-      <a href="assistant_clientele.html">Modes de paiement</a>
-    </div>
-
-    <!-- 4. Réseaux sociaux -->
-    <div class="footer-section social">
-      <h4>Suivez-nous</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/share/1CY4r3SbZq/"><i class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/225566429316"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:biodreyafrica@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.tiktok.com/@bio.drey"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-<script src="chat.js"></script>
-<script>
-// Fonction pour récupérer le panier du localStorage
-function getCart() {
-  return JSON.parse(localStorage.getItem('cart')) || [];
-}
-
-// Fonction pour sauvegarder le panier dans localStorage
-function saveCart(cart) {
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-// Fonction pour ajouter ou mettre à jour un produit dans le panier
-function addToCart(product) {
-  const cart = getCart();
-  const foundIndex = cart.findIndex(item => item.id === product.id);
-  if (foundIndex !== -1) {
-    cart[foundIndex].quantity += product.quantity;
-  } else {
-    cart.push(product);
-  }
-  saveCart(cart);
-
-  // Affiche une notification en haut de l’écran
-  showAddToCartNotification(product.name);
-}
-
-// Fonction pour afficher une notification personnalisée
-function showAddToCartNotification(nomProduit) {
-  const notif = document.createElement('div');
-  notif.className = 'add-to-cart-popup';
-  notif.textContent = `"${nomProduit}" ajouté au panier !`;
-
-  document.body.appendChild(notif);
-
-  setTimeout(() => {
-    notif.classList.add('visible'); // Affiche avec animation
-  }, 10);
-
-  setTimeout(() => {
-    notif.classList.remove('visible'); // Cache
-    setTimeout(() => {
-      notif.remove(); // Supprime du DOM
-    }, 300);
-  }, 2000); // Affiché pendant 2 secondes
-}
-
-// Gère l'ajout de produit depuis chaque box
-document.querySelectorAll('.produit-box').forEach(box => {
-  const btnMoins = box.querySelector('.moins');
-  const btnPlus = box.querySelector('.plus');
-  const inputQty = box.querySelector('.quantite-input');
-  const prixElement = box.querySelector('.produit-prix');
-  const prixUnitaire = parseInt(prixElement.dataset.prix, 10);
-  const btnCommander = box.querySelector('.btn-commander');
-  const nomProduit = box.querySelector('.produit-nom').innerText;
-  const idProduit = box.dataset.id;
-
-  function updatePrix() {
-    let qte = parseInt(inputQty.value, 10);
-    if (isNaN(qte) || qte < 1) qte = 1;
-    inputQty.value = qte;
-    const prixTotal = prixUnitaire * qte;
-    prixElement.textContent = `Prix : ${prixTotal.toLocaleString()} FCFA`;
-  }
-
-  btnMoins.addEventListener('click', () => {
-    let qte = parseInt(inputQty.value, 10);
-    if (qte > 1) {
-      inputQty.value = qte - 1;
-      updatePrix();
-    }
-  });
-
-  btnPlus.addEventListener('click', () => {
-    let qte = parseInt(inputQty.value, 10);
-    inputQty.value = qte + 1;
-    updatePrix();
-  });
-
-  inputQty.addEventListener('input', () => {
-    updatePrix();
-  });
-
-  btnCommander.addEventListener('click', () => {
-    let qte = parseInt(inputQty.value, 10);
-    if (isNaN(qte) || qte < 1) qte = 1;
-
-    addToCart({
-      id: idProduit,
-      name: nomProduit,
-      price: prixUnitaire,
-      quantity: qte
-    });
-
-    inputQty.value = 1;
-    updatePrix();
-
-    // ✅ Redirection vers panier.html après ajout
-    window.location.href = 'panier.html';
-  });
-
-  updatePrix();
-});
-
-</script>
-
-
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
