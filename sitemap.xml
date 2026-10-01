@@ -3,21 +3,21 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://bio-drey.site/</loc>
+    <loc>https://bio-drey.store/</loc>
     <lastmod>2027-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://bio-drey.site/nos_produits.html</loc>
+    <loc>https://bio-drey.store/nos_produits.html</loc>
     <lastmod>2027-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bio-drey.site/assistant_clientele.html</loc>
+    <loc>https://bio-drey.store/assistant_clientele.html</loc>
     <lastmod>2025-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
